@@ -1,4 +1,4 @@
- package com.example.vika.flowersapp.model;
+ package com.example.vika.flowersapp.model.pojo;
 
  import com.google.gson.annotations.Expose;
  import com.google.gson.annotations.SerializedName;

@@ -1,6 +1,6 @@
 package com.example.vika.flowersapp.controller;
 
-import com.example.vika.flowersapp.api.FlowerService;
+import com.example.vika.flowersapp.model.api.FlowerService;
 import com.example.vika.flowersapp.utils.Constants;
 
 import retrofit2.Retrofit;

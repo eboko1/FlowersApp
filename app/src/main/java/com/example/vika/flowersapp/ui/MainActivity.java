@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.Menu;
 import android.widget.Toast;
 
 import com.example.vika.flowersapp.R;
-import com.example.vika.flowersapp.adapter.FlowerAdapter;
+import com.example.vika.flowersapp.model.adapter.FlowerAdapter;
 import com.example.vika.flowersapp.controller.RestClient;
-import com.example.vika.flowersapp.model.Flower;
+import com.example.vika.flowersapp.model.pojo.Flower;
 import com.example.vika.flowersapp.utils.InternetConnection;
 
 import java.util.List;

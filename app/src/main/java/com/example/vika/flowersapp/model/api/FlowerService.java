@@ -1,6 +1,6 @@
-package com.example.vika.flowersapp.api;
+package com.example.vika.flowersapp.model.api;
 
-import com.example.vika.flowersapp.model.Flower;
+import com.example.vika.flowersapp.model.pojo.Flower;
 
 import java.util.List;
 

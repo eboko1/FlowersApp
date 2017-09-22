@@ -1,4 +1,4 @@
-package com.example.vika.flowersapp.adapter;
+package com.example.vika.flowersapp.model.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.vika.flowersapp.R;
-import com.example.vika.flowersapp.model.Flower;
+import com.example.vika.flowersapp.model.pojo.Flower;
 import com.example.vika.flowersapp.utils.Constants;
 import com.squareup.picasso.Picasso;
 
