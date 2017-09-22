@@ -52,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     for(int i=0; i<flowers.size(); i++){
                      Flower flower = flowers.get(i);
                      flowerAdapter.addFlower(flower);
-                        Log.i(LOG, "flowers " + flower.getName());
+                        Log.i(LOG, "flowers name " + flower.getName());
+                        Log.i(LOG, "flowers price " + flower.getPrice());
+                        Log.i(LOG, "flowers photo " + flower.getPhoto());
                     }
                 } else {
                     int codeState = response.code();
@@ -68,6 +70,5 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(LOG, "onFailure " + t.getMessage());
             }
         });
-
     }
 }

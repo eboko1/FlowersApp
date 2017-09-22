@@ -45,9 +45,9 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
         holder.name.setText(flower.getName());
         holder.price.setText(flower.getPrice().toString());
 
-      //  Picasso.with(holder.itemView.getContext())
-         //       .load(flower.getPhoto())
-         //       .into(holder.image);
+        Picasso.with(holder.itemView.getContext())
+                .load(flower.getPhoto())
+                .into(holder.image);
 
     }
 
@@ -69,9 +69,9 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
        public FlowerViewHolder(View itemView) {
            super(itemView);
 
-           ImageView image = (ImageView)itemView.findViewById(R.id.image);
-           TextView name = (TextView)itemView.findViewById(R.id.name);
-           TextView price = (TextView)itemView.findViewById(R.id.price);
+           image = (ImageView)itemView.findViewById(R.id.image);
+           name = (TextView)itemView.findViewById(R.id.name);
+           price = (TextView)itemView.findViewById(R.id.price);
        }
    }
 }
