@@ -1,5 +1,7 @@
 package com.example.vika.flowersapp.ui;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,8 +13,10 @@ import com.example.vika.flowersapp.R;
 import com.example.vika.flowersapp.model.adapter.FlowerAdapter;
 import com.example.vika.flowersapp.controller.RestClient;
 import com.example.vika.flowersapp.model.pojo.Flower;
-import com.example.vika.flowersapp.utils.InternetConnection;
+import com.example.vika.flowersapp.model.utils.Constants;
+import com.example.vika.flowersapp.model.utils.InternetConnection;
 
+import java.io.Serializable;
 import java.util.List;
 
 import retrofit2.Call;
@@ -51,7 +55,12 @@ public class MainActivity extends AppCompatActivity implements FlowerAdapter.Flo
 
     public void onClick(int position) {
         Flower selectedFlower = flowerAdapter.getSelectedFlower(position);
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        intent.putExtra(Constants.REFERENCE.FLOWER, (Serializable) selectedFlower);
+        startActivity(intent);
     }
+
+
 
     private void getApiData(){
         Call<List<Flower>> callList = RestClient.getFlowerApiClient().getAllFlowers();

@@ -1,7 +1,7 @@
 package com.example.vika.flowersapp.controller;
 
 import com.example.vika.flowersapp.model.api.FlowerService;
-import com.example.vika.flowersapp.utils.Constants;
+import com.example.vika.flowersapp.model.utils.Constants;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

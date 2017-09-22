@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.vika.flowersapp.R;
 import com.example.vika.flowersapp.model.pojo.Flower;
-import com.example.vika.flowersapp.utils.Constants;
+import com.example.vika.flowersapp.model.utils.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

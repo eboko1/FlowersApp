@@ -1,4 +1,4 @@
-package com.example.vika.flowersapp.utils;
+package com.example.vika.flowersapp.model.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
