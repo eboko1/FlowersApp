@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
 import android.widget.Toast;
 
 import com.example.vika.flowersapp.R;
@@ -19,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FlowerAdapter.FlowerClickListener{
     private static final String LOG = "MainActivity";
 
     private RecyclerView recyclerView;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        flowerAdapter = new FlowerAdapter();
+        flowerAdapter = new FlowerAdapter(this);
         recyclerView.setAdapter(flowerAdapter);
 
         if(InternetConnection.isInternetConnection(this)) {
@@ -46,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, R.string.error_internet_text, Toast.LENGTH_LONG).show();
         }
+    }
+
+
+    public void onClick(int position) {
+        Flower selectedFlower = flowerAdapter.getSelectedFlower(position);
     }
 
     private void getApiData(){
