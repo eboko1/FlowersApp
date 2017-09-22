@@ -8,6 +8,7 @@ public class Constants {
 
     public class Http{
         public static final String BASE_URL = "http://services.hanselandpetal.com/";
+        public static final String IMAGE_URL = "photos/";
 
     }
 }

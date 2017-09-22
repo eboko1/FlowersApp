@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.vika.flowersapp.R;
 import com.example.vika.flowersapp.model.Flower;
+import com.example.vika.flowersapp.utils.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -39,15 +40,17 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
 
     @Override
     public void onBindViewHolder(FlowerViewHolder holder, int position) {
-
-        Log.i(LOG, " onBindViewHolder ");
         Flower flower = flowerList.get(position);
+     //http://services.hanselandpetal.com/photos/calibrachoa.jpg
+        String imageUrl = Constants.Http.BASE_URL + Constants.Http.IMAGE_URL + flower.getPhoto();
+        Log.i(LOG, " onBindViewHolder ");
+
 
         holder.name.setText(flower.getName());
         holder.price.setText(flower.getPrice().toString());
 
         Picasso.with(holder.itemView.getContext())
-                .load(flower.getPhoto())
+                .load(imageUrl)
                 .placeholder(R.mipmap.ic_launcher_round)
                 .error(R.mipmap.ic_launcher)
                 .into(holder.image);
