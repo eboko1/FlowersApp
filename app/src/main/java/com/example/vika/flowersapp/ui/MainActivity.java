@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.vika.flowersapp.R;
 import com.example.vika.flowersapp.adapter.FlowerAdapter;
 import com.example.vika.flowersapp.controller.RestClient;
 import com.example.vika.flowersapp.model.Flower;
+import com.example.vika.flowersapp.utils.InternetConnection;
 
 import java.util.List;
 
@@ -38,7 +40,12 @@ public class MainActivity extends AppCompatActivity {
         flowerAdapter = new FlowerAdapter();
         recyclerView.setAdapter(flowerAdapter);
 
-        getApiData();
+        if(InternetConnection.isInternetConnection(this)) {
+            Toast.makeText(this, R.string.internet_text, Toast.LENGTH_LONG).show();
+            getApiData();
+        } else {
+            Toast.makeText(this, R.string.error_internet_text, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void getApiData(){
@@ -53,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                      Flower flower = flowers.get(i);
                      flowerAdapter.addFlower(flower);
                         Log.i(LOG, "flowers name " + flower.getName());
-                        Log.i(LOG, "flowers price " + flower.getPrice());
                         Log.i(LOG, "flowers photo " + flower.getPhoto());
                     }
                 } else {

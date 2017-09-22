@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FlowersApp</string>
+    <string name="error_internet_text">Internet not connection</string>
+    <string name="internet_text">Internet  connection</string>
 </resources>
