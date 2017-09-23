@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements FlowerAdapter.Flo
     private static final String LOG = "MainActivity";
 
     private RecyclerView recyclerView;
-    private RestClient restClient;
     private FlowerAdapter flowerAdapter;
 
     @Override

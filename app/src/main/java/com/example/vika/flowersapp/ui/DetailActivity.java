@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.vika.flowersapp.R;
 import com.example.vika.flowersapp.model.pojo.Flower;
 import com.example.vika.flowersapp.model.utils.Constants;
+import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
     TextView category, instructions, name, price, productId;
@@ -23,9 +24,15 @@ public class DetailActivity extends AppCompatActivity {
         Flower flower = (Flower) intent.getSerializableExtra(Constants.REFERENCE.FLOWER);
 
         name.setText(flower.getName());
-        price.setText(flower.getPrice().toString());
+        price.setText(String.format("$%.2f",flower.getPrice()));
         instructions.setText(flower.getInstructions());
         productId.setText(String.format("%d", flower.getProductId()));
+
+        Picasso.with(this)
+                .load(Constants.Http.BASE_URL + Constants.Http.IMAGE_URL + flower.getPhoto())
+                .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.mipmap.ic_launcher)
+                .into(image);
 
     }
 

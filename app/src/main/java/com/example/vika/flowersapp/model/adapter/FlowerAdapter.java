@@ -48,7 +48,8 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
 
 
         holder.name.setText(flower.getName());
-        holder.price.setText(flower.getPrice().toString());
+      //  holder.price.setText(flower.getPrice().toString());
+        holder.price.setText(String.format("$%.2f", flower.getPrice()));
 
         Picasso.with(holder.itemView.getContext())
                 .load(imageUrl)
@@ -70,7 +71,6 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
     }
 
     public Flower getSelectedFlower(int position) {
-
         return flowerList.get(position);
     }
 
