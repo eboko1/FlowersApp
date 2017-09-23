@@ -2,4 +2,6 @@
     <string name="app_name">FlowersApp</string>
     <string name="error_internet_text">Internet not connection</string>
     <string name="internet_text">Internet  connection</string>
+    <string name="large_text">Large text</string>
+    <string name="medium_text">Medium text</string>
 </resources>

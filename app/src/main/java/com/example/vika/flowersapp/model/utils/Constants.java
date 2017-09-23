@@ -17,7 +17,7 @@ public class Constants {
 
 
     public static final class Config {
-        public static final String PACKAGE_NAME = "org.dalol.retrofit2_restapidemo.";
+        public static final String PACKAGE_NAME = "com.example.vika.flowersapp.";
     }
 
 }

@@ -39,6 +39,7 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
     }
 
     @Override
+
     public void onBindViewHolder(FlowerViewHolder holder, int position) {
         Flower flower = flowerList.get(position);
      //http://services.hanselandpetal.com/photos/calibrachoa.jpg
@@ -69,6 +70,7 @@ public class FlowerAdapter extends RecyclerView.Adapter<FlowerAdapter.FlowerView
     }
 
     public Flower getSelectedFlower(int position) {
+
         return flowerList.get(position);
     }
 

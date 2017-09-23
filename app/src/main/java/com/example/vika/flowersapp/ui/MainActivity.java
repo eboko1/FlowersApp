@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements FlowerAdapter.Flo
 
 
     public void onClick(int position) {
+        Log.i(LOG, "onClick position " + position);
         Flower selectedFlower = flowerAdapter.getSelectedFlower(position);
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
         intent.putExtra(Constants.REFERENCE.FLOWER, (Serializable) selectedFlower);
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements FlowerAdapter.Flo
                      Flower flower = flowers.get(i);
                      flowerAdapter.addFlower(flower);
                         Log.i(LOG, "flowers name " + flower.getName());
-                        Log.i(LOG, "flowers photo " + flower.getPhoto());
+                      //  Log.i(LOG, "flowers photo " + flower.getPhoto());
                     }
                 } else {
                     int codeState = response.code();

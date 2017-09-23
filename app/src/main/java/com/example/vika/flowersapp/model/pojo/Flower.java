@@ -3,7 +3,9 @@
  import com.google.gson.annotations.Expose;
  import com.google.gson.annotations.SerializedName;
 
-public class Flower {
+ import java.io.Serializable;
+
+ public class Flower  implements Serializable {
 
     @SerializedName("category")
     @Expose
