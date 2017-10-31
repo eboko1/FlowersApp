@@ -4,16 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorYellow"
     android:orientation="vertical"
     tools:context="com.example.vika.flowersapp.ui.DetailActivity">
-
-    <ImageView
-        android:id="@+id/detail_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:src="@mipmap/ic_launcher_round"/>
 
     <TextView
         android:id="@+id/detail_name"
@@ -23,6 +16,11 @@
         android:text="@string/large_text"
         android:padding="8dp"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/ic_launcher_round"/>
 
     <LinearLayout
         android:layout_width="match_parent"

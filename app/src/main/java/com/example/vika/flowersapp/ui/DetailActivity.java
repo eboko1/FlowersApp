@@ -30,6 +30,7 @@ public class DetailActivity extends AppCompatActivity {
 
         Picasso.with(this)
                 .load(Constants.Http.BASE_URL + Constants.Http.IMAGE_URL + flower.getPhoto())
+                .fit()
                 .placeholder(R.mipmap.ic_launcher_round)
                 .error(R.mipmap.ic_launcher)
                 .into(image);
